@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap");
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #16161a;
+  color: #f3f6ff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ffebcd;
+  text-shadow: 0px 0px 8px #ffcc70;
+  font-family: "Mystery Quest";
+}
+
+#recipe-text {
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  margin: 45px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(145deg, #3b3e54, #2a2c3d);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #4e526f, #2f3145);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6), 0px 0px 8px #8a9eff;
+}
+
+#cauldron {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 75px auto 40px auto;
+}
+
+#cauldron-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+#ingredients-container,
+#bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#ingredients-container {
+  z-index: 3;
+}
+#bubble-container {
+  z-index: 4;
+}
+
+.ingredient-icon {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  z-index: 3;
+}
+
+.glow-herbs {
+  text-shadow: 0 0 8px #00ff88, 0 0 12px #00ff88;
+}
+.glow-berries {
+  text-shadow: 0 0 8px #ff3366, 0 0 12px #ff3366;
+}
+.glow-mushrooms {
+  text-shadow: 0 0 8px #d28cff, 0 0 12px #d28cff;
+}
+.glow-water {
+  text-shadow: 0 0 8px #33ccff, 0 0 12px #33ccff;
+}
+.glow-flowers {
+  text-shadow: 0 0 8px #ff66ff, 0 0 12px #ff66ff;
+}
+
+.ingredient-icon.glow {
+  animation: glowPulse 1s ease-out;
+}
+
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+#message {
+  margin-top: 25px;
+  font-weight: bold;
+  min-height: 30px;
+  font-size: 18px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3);
+}
+
+#message.success {
+  color: #80ff80;
+  text-shadow: 0 0 12px #00ff88;
+}
+#message.fail {
+  color: #ff5555;
+  text-shadow: 0 0 12px #ff3333;
+}
+
+/* Hjelpetekst */
+#help-text {
+  margin-top: 60px;
+  font-size: 14px;
+  color: #aaa;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Debug-seksjon */
+#debug-section {
+  margin-top: 50px;
+  background: #2a2c3d;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#debug-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Mystery Quest";
+  color: #ffebcd;
+  text-shadow: 0 0 6px #ffcc70;
+}
+
+#debug-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#debug-table th,
+#debug-table td {
+  padding: 6px 10px;
+  border: 1px solid #5e5d5d;
+  text-align: left;
+}
+
+#debug-table th {
+  background-color: #3b3e54;
+}
+
+#debug-table td {
+  background-color: #2a2c3d;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potion Recipe Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Potion Recipe Game</h1>
+
+    <p id="recipe-text">
+      Create a healing potion! You need: 2 Herbs, 1 Berry, and 1 Mushroom.
+    </p>
+
+    <div class="buttons">
+      <button onclick="addIngredient('herbs')">🌿 Herbs</button>
+      <button onclick="addIngredient('berries')">🍓 Berries</button>
+      <button onclick="addIngredient('mushrooms')">🍄 Mushrooms</button>
+      <button onclick="addIngredient('water')">💧 Water</button>
+      <button onclick="addIngredient('flowers')">🌸 Flowers</button>
+    </div>
+
+    <div class="buttons">
+      <button onclick="checkPotion()">Brew Potion</button>
+      <button onclick="switchPotion()">Switch Recipe</button>
+    </div>
+
+    <div id="cauldron">
+      <div id="ingredients-container"></div>
+      <img src="img/cauldron.webp" alt="Cauldron" id="cauldron-image" />
+      <div id="bubble-container"></div>
+    </div>
+
+    <!-- Meldingsfeltet er kun til suksess/fail -->
+    <div id="message"></div>
+
+    <!-- Debug-seksjon under gryta -->
+    <div id="debug-section">
+      <h2>🧪 Cauldron Contents</h2>
+      <table id="debug-table">
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Hjelpetekst -->
+    <p id="help-text">Check the console (F12) to see more details!</p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
